@@ -44,8 +44,6 @@ Office 365 is making changes to the way it enforces the use of the From: address
     
 - [Other ways to prevent and protect against cybercrimes in Office 365](how-office-365-validates-the-from-address.md#OtherProtection)
     
-Sending on behalf of another user is not affected by this change, for more details, read Terry Zink's blog "[What do we mean when we refer to the 'sender' of an email?](https://blogs.msdn.microsoft.com/tzink/2017/06/22/what-do-we-mean-when-we-refer-to-the-sender-of-an-email/)".
-  
 ### All messages must include a valid From: address
 <a name="MustIncludeFromAddress"> </a>
 
