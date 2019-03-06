@@ -70,6 +70,8 @@ The nitty gritty: DKIM uses a private key to insert an encrypted signature into 
 
 To configure DKIM, you will complete these steps:
   
+<!-- use-dkim-to-validate-outbound-email  - probably https://gallery.technet.microsoft.com/office/Enable-DKIM-security-on-a151f7c6 -->
+
 - [Publish two CNAME records for your custom domain in DNS](use-dkim-to-validate-outbound-email.md#Publish2CNAME)
     
 - [Enable DKIM signing for your custom domain in Office 365](use-dkim-to-validate-outbound-email.md#EnableDKIMinO365)

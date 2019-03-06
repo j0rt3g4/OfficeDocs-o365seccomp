@@ -30,29 +30,31 @@ The default anti-spam action for EOP customers is to move spam messages to the r
     
 2. Run the following command to route content-filtered spam messages to the Junk Email folder:
     
-  ```
+  ```Powershell
   New-TransportRule "NameForRule" -HeaderContainsMessageHeader "X-Forefront-Antispam-Report" -HeaderContainsWords "SFV:SPM" -SetSCL 6
   ```
 
-    Where  _NameForRule_ is the name for the new rule, for example, JunkContentFilteredMail. 
+*Where _NameForRule_ is the name for the new rule, for example, JunkContentFilteredMail.*
     
 3. Run the following command to route messages marked as spam prior to reaching the content filter to the Junk Email folder:
     
-  ```
+  ```Powershell
   New-TransportRule "NameForRule" -HeaderContainsMessageHeader "X-Forefront-Antispam-Report" -HeaderContainsWords "SFV:SKS" -SetSCL 6
   ```
 
-    Where  _NameForRule_ is the name for the new rule, for example, JunkMailBeforeReachingContentFilter. 
+*Where  _NameForRule_ is the name for the new rule, for example, JunkMailBeforeReachingContentFilter.**
     
 4. Run the following command to ensure that messages from senders in a block list in the spam filter policy, such as the **Sender block** list, are routed to the Junk Email folder: 
     
-  ```
+  ```Powershell
   New-TransportRule "NameForRule" -HeaderContainsMessageHeader "X-Forefront-Antispam-Report" -HeaderContainsWords "SFV:SKB" -SetSCL 6
   ```
 
-    Where  _NameForRule_ is the name for the new rule, for example, JunkMailInSenderBlockList. 
+*Where  _NameForRule_ is the name for the new rule, for example, JunkMailInSenderBlockList.**
     
-If you do not want to use the **Move message to Junk Email folder** action, you can choose another action in your content filter policies in the Exchange admin center. For more information, see [Configure your spam filter policies](configure-your-spam-filter-policies.md). For more information about these fields in the message header, see [Anti-spam message headers](anti-spam-message-headers.md).
+
+> [!TIP]
+> If you do not want to use the **Move message to Junk Email folder** action, you can choose another action in your content filter policies in the Exchange admin center. For more information, see [Configure your spam filter policies](configure-your-spam-filter-policies.md). For more information about these fields in the message header, see [Anti-spam message headers](anti-spam-message-headers.md).
   
 ## See also
 
