@@ -600,6 +600,10 @@ Set-DataEncryptionPolicy <policyname> -Refresh
 
 Within 48 hours, the active mailboxes encrypted using this policy will become associated with the updated key. Use the steps in [Determine the DEP assigned to a mailbox](controlling-your-data-using-customer-key.md#DeterminemailboxDEP) to check the value for the DataEncryptionPolicyID property for the mailbox. The value for this property will change once the updated key has been applied. 
   
+> [!IMPORTANT]
+> To manage your keys using **Microsoft Teams** the steps to enable it are still the same that the one listed here. Mainly because you create a DEP and then assign it to the mailboxes.
+  
+
 #### Enable SharePoint Online and OneDrive for Business to use a new key after you roll or rotate keys in Azure Key Vault
 
 When you roll either of the Azure Key Vault keys associated with a DEP used with SharePoint Online and OneDrive for Business, you must run the [Update-SPODataEncryptionPolicy](https://technet.microsoft.com/library/mt843948.aspx) cmdlet to update the DEP and enable Office 365 to start using the new key. 
